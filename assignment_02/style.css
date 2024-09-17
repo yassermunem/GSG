@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #7f8c8d;
+  --secondary-color: #95a5a6;
+  --accent-color: #34495e;
+  --background-color: #bdc3c7;
+  --text-color: #2c3e50;
+  --border-color: #95a5a6;
+
+  --section-padding: 20px;
+  --element-padding: 15px;
+  --section-margin-top: 20px;
+  --heading-font-size: 2em;
+  --subheading-font-size: 1.5em;
+  --body-font-size: 1em;
+  --small-font-size: 0.875em;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "SUSE", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  width: 90%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin: auto;
+  padding: var(--section-padding);
+  text-align: center;
+}
+.header h1.name {
+  font-size: var(--heading-font-size);
+}
+.header h2.job {
+  font-size: var(--subheading-font-size);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.header h1,
+h2,
+a {
+  padding: var(--element-padding);
+}
+.header a:hover {
+  color: var(--secondary-color);
+}
+
+.about {
+  width: 90%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  margin-top: var(--section-margin-top);
+  padding: var(--section-padding);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.about h2.aboutme {
+  font-size: var(--subheading-font-size);
+}
+
+.about > p,
+h2 {
+  padding: var(--element-padding);
+  text-align: center;
+}
+
+.about div {
+  width: 300px;
+  position: absolute;
+  left: 10%;
+  transform: translate(-20%);
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.about div h2 {
+  padding-bottom: 1rem;
+}
+
+.about div.image {
+  background-image: url("image.jpg.avif");
+  background-position: 40%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -35%);
+}
+
+.skills {
+  height: 200px;
+  background-color: var(--primary-color);
+  width: 90%;
+  margin: auto;
+  margin-top: var(--section-margin-top);
+  z-index: -1;
+  background-image: url("image.jpg.avif");
+  background-size: cover;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: var(--subheading-font-size);
+  color: #000;
+}
+
+.ul-container {
+  background-color: white;
+
+  height: 100px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  border-radius: 25px;
+  background-color: rgba(247, 247, 247, 0.5);
+}
+
+.skills ul li {
+  cursor: pointer;
+  float: left;
+  padding: var(--element-padding);
+  list-style: none;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+ul {
+  display: inline-block;
+  margin-top: 23px;
+}
+@keyframes animation {
+  to {
+    background-color: red;
+    transform: translate(0, -15px);
+  }
+}
+
+.skills ul li:hover {
+  animation-name: animation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+div.projects-container {
+  width: 90%;
+  background-color: var(--primary-color);
+  margin: auto;
+  margin-top: var(--section-margin-top);
+  color: var(--text-color);
+  padding: var(--element-padding);
+  text-align: center;
+}
+
+.projects-container .project1,
+.project2 {
+  width: 20%;
+  background-color: #e74c3c;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.projects-container .project3 {
+  width: 105%;
+  background-color: #2ecc71;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.contact-container {
+  width: 90%;
+  padding: var(--section-padding);
+  margin: auto;
+  margin-top: var(--section-margin-top);
+  background-color: var(--border-color);
+}
+
+.contact-container h2 {
+  padding: 0;
+}
+.contact-container h3,
+p {
+  margin-bottom: 1rem;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+textarea {
+  height: 5rem;
+}
+input[type="email"],
+input[type="text"] {
+  height: 30px;
+}
+
+input[type="submit"] {
+  padding: 0.5rem 0.9rem;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+footer {
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  margin-top: var(--section-margin-top);
+  background-color: #000;
+  font-size: var(--text-color);
+}
+
+footer p {
+  padding: 1rem;
+}
+
+footer,
+.about,
+.contact-container,
+.skills,
+.projects-container,
+.header {
+  border-radius: 1rem;
+}
