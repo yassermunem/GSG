@@ -41,7 +41,7 @@ main {
 .box02-01-01 {
   display: flex;
   gap: 1rem;
-  width: 60%;
+  width: 100%;
 }
 
 .box02-01-01 div {
@@ -173,6 +173,11 @@ div.hr {
   height: 2rem;
 }
 
-.arrow {
+div.arrow {
+  margin-left: auto;
+  padding: 1rem 0;
+}
+.arrow span {
   color: #d4d4d8;
+  margin-left: auto;
 }
